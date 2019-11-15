@@ -6,10 +6,10 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:5000/eureka
+      default-zone: http://localhost:5100/eureka
   instance:
-    status-page-url-path: /infoCatalogo
-    health-check-url-path: /healthCatalogo
+    status-page-url-path: /infoCategories
+    health-check-url-path: /healthCategories
     metadata-map:
        app-owner: Haku  
-       description: test application for the Haku Server
+       description: Microservice for Categories management
