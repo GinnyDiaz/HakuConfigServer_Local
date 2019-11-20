@@ -13,3 +13,8 @@ eureka:
     metadata-map:
        app-owner: Haku  
        description: Microservice for Categories management
+
+spring:
+  profiles:
+    active:
+    - prod
