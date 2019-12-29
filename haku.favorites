@@ -1,12 +1,12 @@
 #HTTP Server
 server:
-  port: 7020
+  port: ${PORT:7020}
 
 #Discovery Server Access
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:5100/eureka
+      default-zone: http://localhost:8761/eureka
   instance:
     status-page-url-path: /infoFavorites
     health-check-url-path: /healthFavorites
