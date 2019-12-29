@@ -1,6 +1,6 @@
 #HTTP Server
 server:
-  port: 7010
+  port: ${PORT:7010}
 
 #Discovery Server Access
 eureka:
