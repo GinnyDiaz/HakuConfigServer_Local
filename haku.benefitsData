@@ -1,0 +1,15 @@
+#HTTP Server
+server:
+  port: ${PORT:7090}
+
+#Discovery Server Access
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    status-page-url-path: /infoBenefitsData
+    health-check-url-path: /healthBenefitsData
+    metadata-map:
+       app-owner: Haku Corp
+       description: Microservice for Benefits data management
