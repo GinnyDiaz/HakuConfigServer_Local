@@ -8,8 +8,8 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
   instance:
-    status-page-url-path: /infoBenefitsData
-    health-check-url-path: /healthBenefitsData
+    status-page-url-path: /infoProcessor
+    health-check-url-path: /healthProcessor
     metadata-map:
        app-owner: Haku Corp
-       description: Microservice for Benefits data management
+       description: Microservice for Processor management
