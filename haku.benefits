@@ -19,6 +19,12 @@ spring:
     mongodb:
       uri: mongodb://hakuUser:hakuPass@127.0.0.1:27017/haku_db
       database: haku_db
+      port: 27017
+      host: 127.0.0.1
+      authentication-database=admin
+      username=hakuUser
+      passwordhakuPass
+      
 
 #spring:
 #  autoconfigure:
