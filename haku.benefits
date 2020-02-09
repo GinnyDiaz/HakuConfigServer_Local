@@ -14,16 +14,16 @@ eureka:
        app-owner: Haku Corp
        description: Microservice for Benefits management
 
-spring:
-  data:
-    mongodb:
-      uri: mongodb://hakuUser:hakuPass@127.0.0.1:27017/haku_db
-      database: haku_db
-      port: 27017
-      host: 127.0.0.1
-      authentication-database=admin
-      username=hakuUser
-      passwordhakuPass
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://hakuUser:hakuPass@127.0.0.1:27017/haku_db
+#      database: haku_db
+#      port: 27017
+#      host: 127.0.0.1
+#      authentication-database=admin
+#      username=hakuUser
+#      passwordhakuPass
       
 
 #spring:
