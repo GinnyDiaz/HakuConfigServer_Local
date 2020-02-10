@@ -15,13 +15,13 @@ eureka:
        description: Microservice for Benefits management
 
 spring:
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+  #autoconfigure:
+    #exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
   data:
     mongodb:
-      uri: mongodb://hakuUser:hakuPass@127.0.0.1:27017/haku_db
+      uri: mongodb://hakuUser:hakuPass@34.200.83.250:27017/haku_db
       database: haku_db
       port: 27017
-      host: 127.0.0.1
+      host: 34.200.83.250
       username: hakuUser
       password: hakuPass
