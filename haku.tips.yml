@@ -13,3 +13,13 @@ eureka:
     metadata-map:
        app-owner: Haku  
        description: Microservice for Tips management
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://hakuUser:hakuPass@localhost:27017/haku_db
+      database: haku_db
+      port: 27017
+      host: localhost
+      username: hakuUser
+      password: hakuPass
