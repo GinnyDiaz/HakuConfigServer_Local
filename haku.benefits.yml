@@ -8,6 +8,7 @@ eureka:
     service-url:
       default-zone: http://34.197.143.127:8761/eureka
   instance:
+    hostname : 34.197.143.127
     status-page-url-path: /infoBenefits
     health-check-url-path: /healthBenefits
     metadata-map:
