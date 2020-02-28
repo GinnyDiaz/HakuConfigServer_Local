@@ -10,7 +10,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance : 
-    hostname : localhost    status-page-url-path: /infoFavorites
+    hostname : localhost    
+    status-page-url-path: /infoFavorites
     health-check-url-path: /healthFavorites
     metadata-map:
        app-owner: Haku Corp
