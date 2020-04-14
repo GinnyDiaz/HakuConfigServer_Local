@@ -16,7 +16,15 @@ eureka:
     metadata-map:
        app-owner: Haku Corp
        description: Microservice for Processor management
-ribbon:
-  eureka:
-    enabled: true
-  ServerListRefreshInterval: 15000
+       
+haku-benefits:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 15000
+    
+haku-favorites:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 15000
