@@ -17,6 +17,19 @@ eureka:
        app-owner: Haku Corp
        description: Microservice for Favorites management
 
+management:
+  endpoint:
+    restart:
+      enabled: true
+    health: 
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+       
 spring:
   data:
     mongodb:
@@ -26,3 +39,8 @@ spring:
       host: localhost
       username: hakuUser
       password: hakuPass
+  cloud:
+    discovery:
+      client:
+        health-indicator:
+          enabled: true
