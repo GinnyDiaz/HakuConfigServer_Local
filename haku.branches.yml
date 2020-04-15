@@ -18,6 +18,21 @@ eureka:
        description: Microservice for Branches management
        
 spring:
+  management:
+  endpoint:
+    restart:
+      enabled: true
+    health: 
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    
+       
+spring:
   data:
     mongodb:
       uri: mongodb://hakuUser:hakuPass@localhost:27017/haku_db
@@ -26,3 +41,8 @@ spring:
       host: localhost
       username: hakuUser
       password: hakuPass
+  cloud:
+    discovery:
+      client:
+        health-indicator:
+          enabled: true
