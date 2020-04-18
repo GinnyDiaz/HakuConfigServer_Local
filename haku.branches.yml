@@ -1,6 +1,6 @@
 #HTTP Server
 server:
-  port: ${PORT:7040}
+  port: 7040
 
 #Discovery Server Access
 eureka:
@@ -30,9 +30,6 @@ spring:
     web:
       exposure:
         include: '*'
-    
-       
-spring:
   data:
     mongodb:
       uri: mongodb://hakuUser:hakuPass@localhost:27017/haku_db
