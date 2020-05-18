@@ -1,0 +1,46 @@
+#HTTP Server
+server:
+  port: ${PORT:7100}
+
+#Discovery Server Access
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance : 
+    hostname : localhost
+    status-page-url-path: /infoProfile
+    health-check-url-path: /healthProfile
+    metadata-map:
+       app-owner: Haku  
+       description: Microservice for Profile management
+
+management:
+  endpoint:
+    restart:
+      enabled: true
+    health: 
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://hakuUser:hakuPass@localhost:27017/haku_db
+      database: haku_db
+      port: 27017
+      host: localhost
+      username: hakuUser
+      password: hakuPass
+  cloud:
+    discovery:
+      client:
+        health-indicator:
+          enabled: true
