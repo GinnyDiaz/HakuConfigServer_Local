@@ -48,4 +48,4 @@ spring:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:9080/auth/user/get
+      user-info-uri: http://localhost:9080/auth/user
