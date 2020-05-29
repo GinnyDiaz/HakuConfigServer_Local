@@ -18,13 +18,13 @@ eureka:
        description: Microservice for Redeemed management
 
 management:
-  endpoint:
-    restart:
-      enabled: true
-    health: 
-      enabled: true
-    info:
-      enabled: true
+#  endpoint:
+#   restart:
+#      enabled: true
+#    health: 
+#      enabled: true
+#    info:
+#      enabled: true
   endpoints:
     web:
       exposure:
@@ -39,8 +39,12 @@ spring:
       host: localhost
       username: hakuUser
       password: hakuPass
-  cloud:
-    discovery:
-      client:
-        health-indicator:
-          enabled: true
+#  cloud:
+#    discovery:
+#      client:
+#        health-indicator:
+#          enabled: true
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:5100/auth/auth/user
