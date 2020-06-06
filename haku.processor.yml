@@ -28,3 +28,8 @@ haku-favorites:
     eureka:
       enabled: true
     ServerListRefreshInterval: 15000
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:5100/auth/auth/user
