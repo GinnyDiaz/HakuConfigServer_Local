@@ -33,3 +33,8 @@ security:
   oauth2:
     resource:
       user-info-uri: http://localhost:5100/auth/auth/user
+
+haku:
+  auth:
+    backendClientId : HK_backend
+    backendSecret: thesecret
