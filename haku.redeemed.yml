@@ -11,6 +11,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance : 
     hostname : localhost
+    preferIpAddress: true
+    #ipAddress: localhost
     status-page-url-path: /infoRedeemed
     health-check-url-path: /healthRedeemed
     metadata-map:
@@ -18,13 +20,6 @@ eureka:
        description: Microservice for Redeemed management
 
 management:
-#  endpoint:
-#   restart:
-#      enabled: true
-#    health: 
-#      enabled: true
-#    info:
-#      enabled: true
   endpoints:
     web:
       exposure:
@@ -39,11 +34,7 @@ spring:
       host: localhost
       username: hakuUser
       password: hakuPass
-#  cloud:
-#    discovery:
-#      client:
-#        health-indicator:
-#          enabled: true
+      
 security:
   oauth2:
     resource:
