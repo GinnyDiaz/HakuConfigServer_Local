@@ -1,0 +1,54 @@
+#HTTP Server
+server:
+  port: 9080
+  servlet:
+    context-path: /auth
+
+info:
+  app:
+    name: haku.auth
+    description: OAuth2 Provider
+
+#Discovery Server Access
+eureka:
+  client:
+	register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance : 
+    hostname : localhost
+    prefer-ip-address: true
+    #ip-address: 35.173.83.178
+    status-page-url-path: /infoAuth
+    health-check-url-path: /healthAuth
+    metadata-map:
+       app-owner: Haku Corp
+       description: Microservice for Autentication and Authorization
+       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    restart:
+      enabled: true
+    health: 
+      enabled: true
+    info:
+      enabled: true  
+
+mongo:
+  host: localhost
+  port: 27017
+  database: haku_db
+  username: hakuUser
+  password: hakuPass
+    
+auth:
+  baseUrl: /auth
+  authenticationUrl: /oauth/token
+  checkTokenUrl: /oauth/check_token
+  signUpUrl: /signup
+  resourcesUrl: /user
