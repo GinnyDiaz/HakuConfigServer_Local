@@ -11,8 +11,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance : 
     hostname : localhost
-    statusPageUrlPath: /infoProfile
-    healthCheckUrlPath: /healthProfile
+    statusPageUrlPath: /infoMiscelaneous
+    healthCheckUrlPath: /healthMiscelaneous
     metadataMap:
        appOwner: Haku  
        description: Microservice for Profile management
