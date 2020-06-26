@@ -1,0 +1,95 @@
+server:
+  port: 5100
+  
+zuul:
+  sensitive-headers: vary
+  routes:
+    categories:
+      path: /categories/**
+      service-id: haku.categories
+      sensitive-headers: 
+    benefits:
+      path: /benef/**
+      service-id: haku.benefits
+      sensitive-headers: 
+    branches:
+      path: /branches/**
+      service-id: haku.branches
+      sensitive-headers: 
+    business:
+      path: /business/**
+      service-id: haku.business
+      sensitive-headers: 
+    favorites:
+      path: /favs/**
+      service-id: haku.favorites
+      sensitive-headers: 
+    redeemed:
+      path: /redeemed/**
+      service-id: haku.redeemed
+      sensitive-headers: 
+    users:
+      path: /users/**
+      service-id: haku.users
+      sensitive-headers: 
+    auth:
+      path: /auth/**
+      service-id: haku.auth
+      sensitive-headers: 
+    profile:
+      path: /profile/**
+      service-id: haku.profile
+      sensitive-headers: 
+    processor:
+      path: /processor/**
+      service-id: haku.processor
+      sensitive-headers:
+    tips:
+      path: /tips/**
+      service-id: haku.tips
+      sensitive-headers: 
+  ribbon:
+    eager-load:
+      enabled: true
+  host:
+    time-to-live: -1
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 120000
+    max-per-route-connections: 20000
+    max-total-connections: 10000
+  ignoredServices: '*'
+  semaphore:
+    max-semaphores: 1000 
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance: 
+    hostname: localhost
+    preferIpAddress: true
+
+management:
+  endpoint:
+    hystrix:
+      config:
+        hystrix.command.default.execution.isolation.strategy: THREAD
+        hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 200000
+    routes:
+      enabled: true
+ 
+hystrix:
+  command:
+    default:
+      execution:
+        iso lation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+ribbon:
+   ReadTimeout: 60000
+   connection-timeout: 3000
+   eureka:
+      enabled: true
