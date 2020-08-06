@@ -1,6 +1,6 @@
 #HTTP Server
 server:
-  port: 9080
+  port: 7150
   servlet:
     context-path: /auth
 
