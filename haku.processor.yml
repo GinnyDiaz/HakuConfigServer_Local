@@ -17,17 +17,14 @@ eureka:
        app-owner: Haku Corp
        description: Microservice for Processor management
        
-haku-benefits:
-  ribbon:
-    eureka:
+management:
+  endpoint:
+    restart:
       enabled: true
-    ServerListRefreshInterval: 15000
-    
-haku-favorites:
-  ribbon:
-    eureka:
-      enabled: true
-    ServerListRefreshInterval: 15000
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 security:
   oauth2:
